@@ -17,7 +17,7 @@ export default function NavBar() {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "../public/LakshyaMutha_CV_1.3.pdf"; // Replace with your PDF file's path
+    link.href = "../../public/LakshyaMutha.pdf"; // Replace with your PDF file's path
     link.download = "LakshyaMutha_CV.pdf"; // The name for the downloaded file
     link.click();
   };
