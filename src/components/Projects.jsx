@@ -1,18 +1,17 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa6";
-import img1 from "./assets/StudyNotion1.png";
-import proj1a from './assets/proj1a.jpg'
-import proj1b from './assets/proj1b.jpg'
-import proj1c from './assets/proj1c.jpg'
-import proj1d from './assets/proj1d.jpg'
-import proj2a from './assets/proj2a.jpg'
-import proj2b from './assets/proj2b.jpg'
-import proj3a from './assets/proj3a.jpg'
-import proj3b from './assets/proj3b.jpg'
-import proj4a from './assets/proj4a.jpg'
-import proj4b from './assets/proj4b.jpg'
-import proj5a from './assets/proj5a.jpg'
-import proj5b from './assets/proj5b.jpg'
+import proj1a from '../assets/proj1a.jpg'
+import proj1b from '../assets/proj1b.jpg'
+import proj1c from '../assets/proj1c.jpg'
+import proj1d from '../assets/proj1d.jpg'
+import proj2a from '../assets/proj2a.jpg'
+import proj2b from '../assets/proj2b.jpg'
+import proj3a from '../assets/proj3a.jpg'
+import proj3b from '../assets/proj3b.jpg'
+import proj4a from '../assets/proj4a.jpg'
+import proj4b from '../assets/proj4b.jpg'
+import proj5a from '../assets/proj5a.jpg'
+import proj5b from '../assets/proj5b.jpg'
 
 const Projects = () => {
   return (

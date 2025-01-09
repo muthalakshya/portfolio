@@ -1,5 +1,5 @@
 import React from 'react'
-import profile  from "./assets/profile.jpg";
+import profile  from "../assets/profile.jpg";
 
 const About = () => {
   return (
@@ -14,8 +14,8 @@ const About = () => {
         </p>
         <p className='mt-6 playwritefont text-lg italic justify-center sm:leading-10 md:leading-8   '>Passionate learner in MERN stack development, aspiring & practicing to build full-stack web
           applications</p>
-        <p className='mt-6 playwritefont text-lg italic justify-center sm:leading-10 mb-2 md:leading-8  '>Trained in React, Node.js, Express.js & MongoDB- creating responsive interfaces & integrating APIs</p>
-        <button className='sm:text-xl text-base md:lg sm:mt-10 md:mt-2 lg:mt-2 text-center italic text-white px-10   bg-zinc-700  p-3 rounded-full'>Let's Connect</button>
+        <p className='mt-6 playwritefont text-lg italic justify-center sm:leading-10 mb-6 md:leading-8  '>Trained in React, Node.js, Express.js & MongoDB- creating responsive interfaces & integrating APIs</p>
+        <a href='#connectlink' className=' sm:text-xl text-base md:lg sm:mt-10 md:mt-2 lg:mt-2 text-center italic text-white px-10   bg-zinc-700  p-3 rounded-full'>Let's Connect</a>
       </div>
     </div>
     </div>

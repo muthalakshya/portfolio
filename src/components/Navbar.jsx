@@ -1,6 +1,6 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import lm from './assets/lm.jpeg'
+import lm from '../assets/lm.jpeg'
 
 const navigation = [
   { name: 'Home', href: '#home', current: true },
@@ -41,6 +41,7 @@ export default function NavBar() {
                 alt="Your Company"
                 src={lm}
                 className="h-8 w-auto"
+                onClick={(e)=>window.location.reload()}
               />
             </div>
             <div className="hidden sm:ml-6 sm:block">

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import NavBar from './Navbar'
-import Texttransition from './Texttransition'
 import { ReactTyped } from "react-typed";
 
 const Home = () => {
