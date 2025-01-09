@@ -1,6 +1,7 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import lm from '../assets/lm.jpeg'
+import resume from '../assets/LakshyaMutha.pdf'
 
 const navigation = [
   { name: 'Home', href: '#home', current: true },
@@ -17,7 +18,7 @@ export default function NavBar() {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/public/LakshyaMutha.pdf"; // Replace with your PDF file's path
+    link.href = resume; // Replace with your PDF file's path
     link.download = "LakshyaMutha_CV.pdf"; // The name for the downloaded file
     link.click();
   };
