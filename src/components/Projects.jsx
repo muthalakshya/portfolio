@@ -1,5 +1,9 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa6";
+import proj0a from '../assets/proj0a.jpg'
+import proj0b from '../assets/proj0b.jpg'
+import proj0c from '../assets/proj0c.jpg'
+import proj0d from '../assets/proj0d.jpg'
 import proj1a from '../assets/proj1a.jpg'
 import proj1b from '../assets/proj1b.jpg'
 import proj1c from '../assets/proj1c.jpg'
@@ -19,6 +23,76 @@ const Projects = () => {
       <h1 className="text-center text-3xl sm:text-5xl text-white mb-8">Projects</h1>
 
       {/* Project Section */}
+      <div className="p-8 flex flex-col lg:flex-row gap-8">
+        {/* Project Title */}
+        <div className="lg:w-1/4">
+          <h1 className="text-3xl sm:text-5xl text-white">Fusion Furnish</h1>
+          <h2 className="text-lg sm:text-xl pt-4 text-blue-300">AI-Powered Home Decor Platform</h2>
+        </div>
+
+        {/* Project Details */}
+        <div className="lg:w-3/4">
+          {/* Technologies Used */}
+          <div className="flex flex-row justify-between sm:items-center">
+            <h2 className="text-xl sm:text-3xl text-white font-bold mt-2">Technologies Used</h2>
+            <div className='flex'>
+              <a href="https://github.com/muthalakshya/FutureFurnish" className="text-md text-white mr-2 bg-green-600 px-2 pt-2 sm:px-5 sm:pt-2 rounded mt-2 sm:mt-0">
+                <FaGithub />
+              </a>
+              <a href="https://fusion-furnish.vercel.app/" className="text-md text-white bg-red-600 px-5 py-1 rounded mt-2 sm:mt-0">
+                Live
+              </a>
+            </div>
+          </div>
+
+          {/* Technology Tags */}
+          <div className="flex flex-wrap mt-4">
+            {[
+              "React",
+              "Tailwind",
+              "JWT",
+              "Node.js",
+              "Express",
+              "MongoDB",
+              "Mongoose",
+            ].map((tech) => (
+              <h2
+                key={tech}
+                className="text-sm text-white hover:text-black border border-white hover:bg-white px-4 sm:px-6 py-1 rounded-2xl m-2"
+              >
+                {tech}
+              </h2>
+            ))}
+          </div>
+
+          <h2  className="text-lg pt-4 sm:text-xl text-zinc-400">The home decor industry lacks a platform connecting manufacturers, consultants, and homeowners for efficient collaboration.</h2>
+
+          {/* Description List */}
+          <ul className="mt-8 list-disc pl-6 text-sm sm:text-lg font-mono text-gray-300 marker:text-sky-400">
+            <li className="mb-4">
+            Automated backend operations
+            </li>
+            <li className="mb-4">
+            Curated designs for homeowners
+            </li>
+            <li className="mb-4">
+            30-minute e-commerce store setup for consultants
+            </li>
+          </ul>
+
+          {/* Project Images */}
+          <div className="flex flex-wrap gap-4 mt-8">
+            {[proj0a,proj0b,proj0c,proj0d].map((image, index) => (
+              <img
+                key={index}
+                className="w-[46%] sm:w-[48%] rounded-2xl "
+                src={image}
+                alt={`Project ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
       <div className="p-8 flex flex-col lg:flex-row gap-8">
         {/* Project Title */}
         <div className="lg:w-1/4">
