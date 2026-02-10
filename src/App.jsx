@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import Home from './components/Home'
-import About from './components/About'
-import Experiences from './components/Experiences'
-import Projects from './components/Projects'
-import NavBar from './components/Navbar'
-import Footer from './components/Footer'
+import React, { useState, useEffect } from "react";
+import Home from "./components/Home";
+import About from "./components/About";
+import Experiences from "./components/Experiences";
+import Projects from "./components/Projects";
+import NavBar from "./components/Navbar";
+import Footer from "./components/Footer";
 import { FaArrowUp } from "react-icons/fa";
 
 const App = () => {
@@ -20,20 +20,20 @@ const App = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
   return (
-    <div className="bg-black text-slate-100 playwritefont">
-      <div className="bg-gradient-to-b from-zinc-900 p-6 floating-bg sm:smfloating-bg">
+    <div className="bg-white text-black playwritefont moving-grid scroll-smooth">
+      <div className="bg-transparent p-6 sm:mb-20">
         <Home />
       </div>
       <About />
@@ -45,7 +45,7 @@ const App = () => {
       {showButton && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-5 right-5 z-50 rounded-full bg-orange-200 p-4 text-black shadow-lg hover:text-black hover:bg-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
+          className="fixed bottom-5 right-5 z-50 rounded-full bg-brand-yellow p-4 text-black shadow-lg hover:text-white hover:bg-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 transition-all duration-300"
           aria-label="Back to Top"
         >
           <FaArrowUp />

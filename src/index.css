@@ -2,69 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap");
 
-.backhome{
-    /* background-image: url("./assets/freepik__expand__70335.jpeg"); */
-    height: 625px;
-    color: azure;
+.backhome {
+  height: 625px;
+  color: #000000;
 }
 
-
-.playwritefont{
+.playwritefont {
   font-family: "Playwrite AU SA", serif;
   font-optical-sizing: auto;
 }
 
-/* Full-screen background with floating gradient */
+/* Full-screen background with floating gradient - Light Theme */
 .floating-bg {
   position: relative;
   height: 100vh;
   width: 100%;
-  background: linear-gradient(55deg, #000000, #000000, #d6d6f2);
-  background-size: 180% 100%; /* Larger than the screen for smooth movement */
-  animation: gradientAnimation 15s ease infinite;
+  background: white;
+  /* Optional: Subtle yellow gradient or accent */
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #fefce8 100%
+  ); /* white to yellow-50 */
   /* display: flex; */
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
-/* Gradient animation */
-@keyframes gradientAnimation {
+
+@keyframes moveGrid {
   0% {
-    background-position: 0% 40%;
-  }
-  50% {
-    background-position: 40% 0%;
+    background-position: 0 0;
   }
   100% {
-    background-position: 0% 40%;
+    background-position: 40px 40px;
   }
 }
 
-
-
-.smfloating-bg {
+.moving-grid {
   position: relative;
-  height: 100vh;
   width: 100%;
-  background: linear-gradient(45deg, #000000, #000000, #9a9abe);
-  background-size: 300% 400%; /* Larger than the screen for smooth movement */
-  animation: smgradientAnimation 15s ease infinite;
-  /* display: flex; */
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-/* Gradient animation */
-@keyframes smgradientAnimation {
-  0% {
-    background-position: 0% 10%;
-  }
-  50% {
-    background-position: 10% 0%;
-  }
-  100% {
-    background-position: 0% 10%;
-  }
+  min-height: 100vh;
+  background-color: #ffffff;
+  background-image: 
+    linear-gradient(#e5e7eb 1px, transparent 1px),
+    linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: moveGrid 15s linear infinite;
 }

@@ -1,21 +1,28 @@
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import lm from '../assets/lm.jpeg'
-import resume from '../assets/LakshyaMutha.pdf'
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuItems,
+} from "@headlessui/react";
+import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import lm from "../assets/lm.jpeg";
+import resume from "../assets/LakshyaMutha.pdf";
 
 const navigation = [
-  { name: 'Home', href: '#home', current: true },
-  { name: 'About', href: '#about', current: false },
-  { name: 'Experiences', href: '#experience', current: false },
-  { name: 'Projects', href: '#projects', current: false },
-]
+  { name: "Home", href: "#home", current: true },
+  { name: "About", href: "#about", current: false },
+  { name: "Experiences", href: "#experience", current: false },
+  { name: "Projects", href: "#projects", current: false },
+];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function NavBar() {
-
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = resume; // Replace with your PDF file's path
@@ -24,16 +31,25 @@ export default function NavBar() {
   };
 
   return (
-    <Disclosure as="nav" className=" playwritefont font-bold text-zinc-900 rounded-xl">
+    <Disclosure
+      as="nav"
+      className=" playwritefont font-bold text-zinc-900 rounded-xl"
+    >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button*/}
-            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-gray-200 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black">
               <span className="absolute -inset-0.5" />
               <span className="sr-only">Open main menu</span>
-              <Bars3Icon aria-hidden="true" className="block size-6 group-data-[open]:hidden" />
-              <XMarkIcon aria-hidden="true" className="hidden size-6 group-data-[open]:block" />
+              <Bars3Icon
+                aria-hidden="true"
+                className="block size-6 group-data-[open]:hidden"
+              />
+              <XMarkIcon
+                aria-hidden="true"
+                className="hidden size-6 group-data-[open]:block"
+              />
             </DisclosureButton>
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
@@ -42,7 +58,7 @@ export default function NavBar() {
                 alt="Your Company"
                 src={lm}
                 className="h-8 w-auto"
-                onClick={(e)=>window.location.reload()}
+                onClick={(e) => window.location.reload()}
               />
             </div>
             <div className="hidden sm:ml-6 sm:block">
@@ -51,10 +67,12 @@ export default function NavBar() {
                   <a
                     key={item.name}
                     href={item.href}
-                    aria-current={item.current ? 'page' : undefined}
+                    aria-current={item.current ? "page" : undefined}
                     className={classNames(
-                      item.current ? 'bg-orange-200 text-black' : 'text-slate-100 hover:bg-white hover:text-black',
-                      'rounded-md px-6 py-1 text-md  font-semibold',
+                      item.current
+                        ? "bg-brand-yellow text-black"
+                        : "text-black hover:bg-brand-yellow hover:text-black",
+                      "rounded-md px-6 py-1 text-md  font-semibold transition-colors duration-200",
                     )}
                   >
                     {item.name}
@@ -67,7 +85,7 @@ export default function NavBar() {
             <button
               type="button"
               onClick={handleDownload}
-              className="relative rounded-lg  bg-white p-1 px-6 text-indigo-900 hover:text-white hover:bg-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+              className="relative rounded-lg bg-black p-1 px-6 text-white hover:text-black hover:bg-brand-yellow focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 transition-all duration-300"
             >
               Resume
             </button>
@@ -82,10 +100,12 @@ export default function NavBar() {
               key={item.name}
               as="a"
               href={item.href}
-              aria-current={item.current ? 'page' : undefined}
+              aria-current={item.current ? "page" : undefined}
               className={classNames(
-                item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                'block rounded-md px-3 py-2 text-base font-medium',
+                item.current
+                  ? "bg-brand-yellow text-black"
+                  : "text-zinc-600 hover:bg-gray-200 hover:text-black",
+                "block rounded-md px-3 py-2 text-base font-medium",
               )}
             >
               {item.name}
@@ -94,5 +114,5 @@ export default function NavBar() {
         </div>
       </DisclosurePanel>
     </Disclosure>
-  )
+  );
 }
