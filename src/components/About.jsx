@@ -3,8 +3,8 @@ import profile from "../assets/profile.jpg";
 
 const About = () => {
   return (
-    <div id="about" className=" sm:pt-20 pt-8">
-      <div className="flex flex-col-reverse md:flex-row w-full mt-8 md:mt-20 p-4 sm:p-16 md:p-2 mb-20 md:mb-32 px-4 sm:px-7 min-h-screen playwritefont items-center justify-center">
+    <div id="about" className="">
+      <div className="flex flex-col md:flex-row w-full mt-8 md:mt-20 p-4 sm:p-16 md:p-2 mb-20 md:mb-32 px-4 sm:px-7 min-h-screen playwritefont items-center justify-center">
         <div className="w-full md:w-[46%] p-4 md:p-8 flex justify-center">
           <img
             className="w-full max-w-[400px] rounded-3xl shadow-lg object-cover"

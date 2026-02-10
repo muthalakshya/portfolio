@@ -128,10 +128,10 @@ const ImageCarousel = ({ images }) => {
   };
 
   return (
-    <div className="relative group w-full h-60 sm:h-80 md:h-96 mt-8">
+    <div className="relative group w-full h-40 sm:h-60 md:h-80 mt-8 mb-8">
       <div
         style={{ backgroundImage: `url(${images[currentIndex]})` }}
-        className="size-full rounded-2xl bg-center bg-contain bg-no-repeat duration-500 border border-black bg-gray-100"
+        className="size-full rounded-2xl bg-center bg-cover sm:bg-contain bg-no-repeat duration-500 border border-black bg-gray-100"
       ></div>
       {/* Left Arrow */}
       <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-2 sm:left-5 text-lg sm:text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer hover:bg-black/50 transition-all">
@@ -174,13 +174,13 @@ const Projects = () => {
       {projectsData.map((project, index) => (
         <div
           key={index}
-          className="mb-16 p-4 sm:p-8 bg-white rounded-lg border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] transition-all flex flex-col lg:flex-row gap-8"
+          className="mb-16 p-4 sm:p-8 bg-white rounded-lg border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] sm:hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] transition-all flex flex-col lg:flex-row gap-8"
         >
           {/* Project Title */}
           <div className="lg:w-1/4">
-            <h1 className="text-3xl sm:text-5xl text-black">{project.title}</h1>
+            <h1 className="text-3xl sm:text-5xl bg-gradient-to-r from-yellow-600 via-black to-yellow-600 bg-clip-text text-transparent">{project.title}</h1>
             {project.subtitle && (
-              <h2 className="text-lg sm:text-xl pt-4 text-blue-600">
+              <h2 className="text-lg sm:text-xl pt-4 text-black">
                 {project.subtitle}
               </h2>
             )}
@@ -189,7 +189,7 @@ const Projects = () => {
           {/* Project Details */}
           <div className="lg:w-3/4">
             {/* Technologies Used */}
-            <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 sm:gap-0">
+            <div className="flex flex-col-reverse sm:flex-row justify-between sm:items-center gap-4 sm:gap-0">
               <h2 className="text-xl sm:text-3xl text-black font-bold mt-2">
                 Technologies Used
               </h2>

@@ -42,13 +42,16 @@
 }
 
 .moving-grid {
-  position: relative;
+  position: fixed;
+  top: 0;
+  right: 0;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   background-color: #ffffff;
   background-image: 
-    linear-gradient(#e5e7eb 1px, transparent 1px),
-    linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
+    linear-gradient(rgba(221, 221, 26, 0.785) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(163, 163, 13, 0.785) 1px, transparent 1px);
   background-size: 40px 40px;
   animation: moveGrid 15s linear infinite;
+  z-index: -1;
 }

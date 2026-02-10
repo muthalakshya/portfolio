@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Home from "./components/Home";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Experiences from "./components/Experiences";
 import Projects from "./components/Projects";
-import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { FaArrowUp } from "react-icons/fa";
 
@@ -33,15 +32,21 @@ const App = () => {
   };
 
   return (
-    <div className="bg-white text-black playwritefont moving-grid scroll-smooth">
-      <div className="bg-transparent p-6 sm:mb-20">
+    <div className="text-black playwritefont scroll-smooth relative min-h-screen">
+      {/* Background Grid */}
+      <div className="moving-grid"></div>
+
+      {/* Content */}
+      <div className="relative z-10 bg-transparent p-6 sm:mb-20">
         <Home />
       </div>
-      <About />
-      <Skills />
-      <Experiences />
-      <Projects />
-      <Footer />
+      <div className="relative z-10">
+        <About />
+        <Skills />
+        <Experiences />
+        <Projects />
+        <Footer />
+      </div>
 
       {/* Back to Top Button */}
       {showButton && (
