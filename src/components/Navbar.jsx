@@ -20,6 +20,7 @@ const navigation = [
 export default function NavBar() {
   // eslint-disable-next-line no-unused-vars
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +28,28 @@ export default function NavBar() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-50% 0px -50% 0px" },
+    );
+
+    navigation.forEach((item) => {
+      const section = document.querySelector(item.href);
+      if (section) {
+        observer.observe(section);
+      }
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   const handleDownload = () => {
@@ -78,7 +101,11 @@ export default function NavBar() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="text-zinc-700 hover:bg-brand-yellow hover:text-black rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200"
+                      className={`rounded-full px-4 py-2 text-sm font-bold transition-all duration-200 ${
+                        activeSection === item.href.substring(1)
+                          ? "bg-brand-yellow text-black scale-105 shadow-sm"
+                          : "text-zinc-600 hover:bg-gray-100 hover:text-black"
+                      }`}
                     >
                       {item.name}
                     </a>
@@ -105,7 +132,11 @@ export default function NavBar() {
                 key={item.name}
                 as="a"
                 href={item.href}
-                className="block rounded-lg px-3 py-2 text-base font-medium text-black hover:bg-brand-yellow hover:text-black"
+                className={`block rounded-lg px-3 py-2 text-base font-bold ${
+                  activeSection === item.href.substring(1)
+                    ? "bg-brand-yellow text-black"
+                    : "text-zinc-600 hover:bg-gray-100 hover:text-black"
+                }`}
               >
                 {item.name}
               </DisclosureButton>
