@@ -1,4 +1,3 @@
-import React from "react";
 import { FaGithub } from "react-icons/fa6";
 import proj0a from "../assets/proj0a.jpg";
 import proj0b from "../assets/proj0b.jpg";

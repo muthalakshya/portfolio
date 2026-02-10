@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import NavBar from "./Navbar";
 import { ReactTyped } from "react-typed";
 
 const Home = () => {
-  const [menu, setMenu] = useState(false);
-
   return (
     <div id="home" className="bg-transparent">
       <NavBar />
