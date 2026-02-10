@@ -56,7 +56,7 @@ export default function NavBar() {
             <div className="flex shrink-0 items-center">
               <img
                 alt="Your Company"
-                src={lm}
+                src={"https://res.cloudinary.com/dbkecod0k/image/upload/v1770741855/Screenshot_2026-02-10_221212_py95t5.jpg"}
                 className="h-8 w-auto"
                 onClick={(e) => window.location.reload()}
               />
