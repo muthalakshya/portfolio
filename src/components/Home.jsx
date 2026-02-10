@@ -1,11 +1,12 @@
-import NavBar from "./Navbar";
 import { ReactTyped } from "react-typed";
 
 const Home = () => {
   return (
-    <div id="home" className="bg-transparent">
-      <NavBar />
-      <div className="sm:place-content-center pt-40 p-4 sm:p-0 backhome text-center">
+    <div
+      id="home"
+      className="bg-transparent min-h-screen flex items-center justify-center pt-32"
+    >
+      <div className="sm:place-content-center p-4 sm:p-0 backhome text-center flex flex-col justify-center items-center w-full">
         <div className="sm:text-6xl text-3xl md:text-5xl text-center font-bold italic text-black">
           <ReactTyped
             strings={["Crafting Code, Breathing Innovation."]}

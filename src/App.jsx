@@ -2,8 +2,11 @@ import { useState, useEffect } from "react";
 import Home from "./components/Home";
 import About from "./components/About";
 import Skills from "./components/Skills";
+import Education from "./components/Education";
 import Experiences from "./components/Experiences";
 import Projects from "./components/Projects";
+import Achievements from "./components/Achievements";
+import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { FaArrowUp } from "react-icons/fa";
 
@@ -36,15 +39,19 @@ const App = () => {
       {/* Background Grid */}
       <div className="moving-grid"></div>
 
+      <NavBar />
+
       {/* Content */}
-      <div className="relative z-10 bg-transparent p-6 sm:mb-20">
+      <div className="relative z-10 bg-transparent">
         <Home />
       </div>
       <div className="relative z-10">
         <About />
         <Skills />
+        <Education />
         <Experiences />
         <Projects />
+        <Achievements />
         <Footer />
       </div>
 

@@ -2,117 +2,124 @@ import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
 } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import lm from "../assets/lm.jpeg";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import resume from "../assets/LakshyaMutha.pdf";
+import { useState, useEffect } from "react";
 
 const navigation = [
-  { name: "Home", href: "#home", current: true },
-  { name: "About", href: "#about", current: false },
-  { name: "Experiences", href: "#experience", current: false },
-  { name: "Projects", href: "#projects", current: false },
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Education", href: "#education" },
+  { name: "Experience", href: "#experience" },
+  { name: "Projects", href: "#projects" },
+  { name: "Achievements", href: "#achievements" },
 ];
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export default function NavBar() {
+  // eslint-disable-next-line no-unused-vars
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = resume; // Replace with your PDF file's path
-    link.download = "LakshyaMutha_CV.pdf"; // The name for the downloaded file
+    link.href = resume;
+    link.download = "LakshyaMutha_CV.pdf";
     link.click();
   };
 
   return (
-    <Disclosure
-      as="nav"
-      className=" playwritefont font-bold text-zinc-900 rounded-xl"
-    >
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
-        <div className="relative flex h-16 items-center justify-between">
-          <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            {/* Mobile menu button*/}
-            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-gray-200 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black">
-              <span className="absolute -inset-0.5" />
-              <span className="sr-only">Open main menu</span>
-              <Bars3Icon
-                aria-hidden="true"
-                className="block size-6 group-data-[open]:hidden"
-              />
-              <XMarkIcon
-                aria-hidden="true"
-                className="hidden size-6 group-data-[open]:block"
-              />
-            </DisclosureButton>
-          </div>
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex shrink-0 items-center">
-              <img
-                alt="Your Company"
-                src={"https://res.cloudinary.com/dbkecod0k/image/upload/v1770741855/Screenshot_2026-02-10_221212_py95t5.jpg"}
-                className="h-8 w-auto"
-                onClick={(e) => window.location.reload()}
-              />
+    <div className="fixed top-4 md:top-6 inset-x-0 z-[100] flex justify-center px-4">
+      <Disclosure
+        as="nav"
+        className="w-full max-w-6xl bg-white/90 backdrop-blur-md border border-white/20 shadow-xl rounded-2xl md:rounded-full transition-all duration-300"
+      >
+        <div className="px-4 sm:px-6 lg:px-8">
+          <div className="relative flex h-16 md:h-20 items-center justify-between">
+            <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
+              {/* Mobile menu button*/}
+              <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-gray-200 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black">
+                <span className="absolute -inset-0.5" />
+                <span className="sr-only">Open main menu</span>
+                <Bars3Icon
+                  aria-hidden="true"
+                  className="block size-6 group-data-[open]:hidden"
+                />
+                <XMarkIcon
+                  aria-hidden="true"
+                  className="hidden size-6 group-data-[open]:block"
+                />
+              </DisclosureButton>
             </div>
-            <div className="hidden sm:ml-6 sm:block">
-              <div className="flex space-x-4">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    aria-current={item.current ? "page" : undefined}
-                    className={classNames(
-                      item.current
-                        ? "bg-brand-yellow text-black"
-                        : "text-black hover:bg-brand-yellow hover:text-black",
-                      "rounded-md px-6 py-1 text-md  font-semibold transition-colors duration-200",
-                    )}
-                  >
-                    {item.name}
-                  </a>
-                ))}
+            <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
+              <div className="flex shrink-0 items-center">
+                <img
+                  alt="Profile"
+                  src={
+                    "https://res.cloudinary.com/dbkecod0k/image/upload/v1770741855/Screenshot_2026-02-10_221212_py95t5.jpg"
+                  }
+                  className="h-10 w-auto rounded-full cursor-pointer hover:scale-110 transition-transform shadow-sm"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
+                />
+              </div>
+              <div className="hidden md:ml-6 md:block">
+                <div className="flex items-center space-x-1">
+                  {navigation.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="text-zinc-700 hover:bg-brand-yellow hover:text-black rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200"
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
+            <div className="hidden md:flex absolute inset-y-0 right-0 items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
+              <button
+                type="button"
+                onClick={handleDownload}
+                className="relative rounded-full bg-black px-6 py-2.5 text-sm font-bold text-white shadow-lg hover:bg-brand-yellow hover:text-black hover:-translate-y-0.5 transition-all duration-300"
+              >
+                Resume
+              </button>
+            </div>
           </div>
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+        </div>
+
+        <DisclosurePanel className="md:hidden bg-white/95 backdrop-blur-xl border-t border-gray-100 rounded-b-2xl">
+          <div className="space-y-1 px-4 pb-4 pt-2">
+            {navigation.map((item) => (
+              <DisclosureButton
+                key={item.name}
+                as="a"
+                href={item.href}
+                className="block rounded-lg px-3 py-2 text-base font-medium text-black hover:bg-brand-yellow hover:text-black"
+              >
+                {item.name}
+              </DisclosureButton>
+            ))}
             <button
               type="button"
               onClick={handleDownload}
-              className="relative rounded-lg bg-black p-1 px-6 text-white hover:text-black hover:bg-brand-yellow focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 transition-all duration-300"
+              className="w-full mt-2 rounded-lg bg-black px-4 py-2 text-base font-bold text-white shadow-sm hover:bg-brand-yellow hover:text-black transition-all duration-300"
             >
               Resume
             </button>
           </div>
-        </div>
-      </div>
-
-      <DisclosurePanel className="sm:hidden">
-        <div className="space-y-1 px-2 pb-3 pt-2">
-          {navigation.map((item) => (
-            <DisclosureButton
-              key={item.name}
-              as="a"
-              href={item.href}
-              aria-current={item.current ? "page" : undefined}
-              className={classNames(
-                item.current
-                  ? "bg-brand-yellow text-black"
-                  : "text-zinc-600 hover:bg-gray-200 hover:text-black",
-                "block rounded-md px-3 py-2 text-base font-medium",
-              )}
-            >
-              {item.name}
-            </DisclosureButton>
-          ))}
-        </div>
-      </DisclosurePanel>
-    </Disclosure>
+        </DisclosurePanel>
+      </Disclosure>
+    </div>
   );
 }

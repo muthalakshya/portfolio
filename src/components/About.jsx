@@ -8,7 +8,7 @@ const About = () => {
         <div className="w-full md:w-[46%] p-4 md:p-8 flex justify-center">
           <img
             className="w-full max-w-[400px] rounded-3xl shadow-lg object-cover"
-            src={profile}
+            src={"https://res.cloudinary.com/dbkecod0k/image/upload/v1770747023/Generated_Image_February_06_2026_-_9_26PM_r6vhx5.png"}
             alt="Profile"
           />
         </div>

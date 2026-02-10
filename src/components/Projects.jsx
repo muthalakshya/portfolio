@@ -1,22 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { FaGithub, FaChevronLeft, FaChevronRight } from "react-icons/fa6";
-import proj0a from "../assets/proj0a.jpg";
-import proj0b from "../assets/proj0b.jpg";
-import proj0c from "../assets/proj0c.jpg";
-import proj0d from "../assets/proj0d.jpg";
-import proj1a from "../assets/proj1a.jpg";
-import proj1b from "../assets/proj1b.jpg";
-import proj1c from "../assets/proj1c.jpg";
-import proj1d from "../assets/proj1d.jpg";
-import proj2a from "../assets/proj2a.jpg";
-import proj2b from "../assets/proj2b.jpg";
-import proj3a from "../assets/proj3a.jpg";
-import proj3b from "../assets/proj3b.jpg";
-import proj4a from "../assets/proj4a.jpg";
-import proj4b from "../assets/proj4b.jpg";
-import proj5a from "../assets/proj5a.jpg";
-import proj5b from "../assets/proj5b.jpg";
 
 const projectsData = [
   {
@@ -40,7 +24,7 @@ const projectsData = [
     ],
     github: "https://github.com/muthalakshya/FutureFurnish",
     live: "https://fusion-furnish.vercel.app/",
-    images: [proj0a, proj0b, proj0c, proj0d],
+    images: ["https://res.cloudinary.com/dbkecod0k/image/upload/v1770747094/proj0a_lxp36c.jpg", "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747133/proj0b_kcxtce.jpg", "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747242/proj0d_f1dsgv.jpg", "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747243/proj0c_od87cj.jpg"],
   },
   {
     title: "Forever e-com",
@@ -61,7 +45,7 @@ const projectsData = [
     ],
     github: "https://github.com/muthalakshya/forever",
     live: "https://forever-frontend-kfcd.onrender.com/",
-    images: [proj1a, proj1b, proj1c, proj1d],
+    images: ["https://res.cloudinary.com/dbkecod0k/image/upload/v1770747242/proj1a_ctgsex.jpg", "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747242/proj1b_zi06dd.jpg", "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747243/proj1c_ehs7fo.jpg", "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747243/proj1d_lwuljc.jpg"],
   },
   {
     title: "Banking Website",
@@ -71,7 +55,7 @@ const projectsData = [
     bulletPoints: ["Single page layout of banking website"],
     github: "https://github.com/muthalakshya/bank_modern_app",
     live: "https://lakshya-mutha.netlify.app/",
-    images: [proj2a, proj2b],
+    images: ["https://res.cloudinary.com/dbkecod0k/image/upload/v1770747244/proj2a_j9lpk0.jpg", "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747244/proj2b_xnso1n.jpg"],
   },
   {
     title: "Myntra Website",
@@ -81,7 +65,7 @@ const projectsData = [
     bulletPoints: ["Home page of Myntra website"],
     github: "https://github.com/muthalakshya/myntra",
     live: "https://timely-torrone-201ad9.netlify.app/",
-    images: [proj5a, proj5b],
+    images: ["https://res.cloudinary.com/dbkecod0k/image/upload/v1770747260/proj5a_ctwneg.jpg", "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747261/proj5b_jkasnj.jpg"],
   },
   {
     title: "Netfix clone",
@@ -91,7 +75,7 @@ const projectsData = [
     bulletPoints: ["Single page layout of the Netfix website"],
     github: "https://github.com/muthalakshya/netflix",
     live: "https://luxury-travesseiro-068786.netlify.app/",
-    images: [proj3a, proj3b],
+    images: ["https://res.cloudinary.com/dbkecod0k/image/upload/v1770747245/proj3a_gwlwkf.jpg", "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747245/proj3b_hig91c.jpg"],
   },
   {
     title: "PI Logistic",
@@ -108,7 +92,7 @@ const projectsData = [
     bulletPoints: ["Single page layout of the PI Logistic website"],
     github: "https://github.com/muthalakshya/pilogistics",
     live: "https://adorable-treacle-e876a2.netlify.app/",
-    images: [proj4a, proj4b],
+    images: ["https://res.cloudinary.com/dbkecod0k/image/upload/v1770747246/proj4a_st2yqo.jpg", "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747264/proj4b_xznnhs.jpg"],
   },
 ];
 
@@ -196,13 +180,13 @@ const Projects = () => {
               <div className="flex self-start sm:self-auto">
                 <button
                   onClick={() => window.open(project.github, "_blank")}
-                  className="text-md text-white mr-2 bg-green-600 px-4 py-2 sm:px-5 sm:pt-2 rounded transition-transform hover:scale-105"
+                  className="text-md text-white mr-2 bg-black px-4 py-2 sm:px-5 sm:pt-2 rounded transition-transform hover:scale-105"
                 >
                   <FaGithub size={20} />
                 </button>
                 <button
                   onClick={() => window.open(project.live, "_blank")}
-                  className="text-md text-white bg-red-600 px-5 py-1 rounded transition-transform hover:scale-105"
+                  className="text-md text-black bg-brand-yellow px-5 py-1 rounded transition-transform hover:scale-105"
                 >
                   Live
                 </button>

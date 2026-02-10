@@ -10,6 +10,10 @@ const Skills = () => {
     { name: "MongoDB", icon: "https://skillicons.dev/icons?i=mongodb" },
     { name: "Git", icon: "https://skillicons.dev/icons?i=git" },
     { name: "GitHub", icon: "https://skillicons.dev/icons?i=github" },
+    { name: "Java", icon: "https://skillicons.dev/icons?i=java" },
+    { name: "Bootstrap", icon: "https://skillicons.dev/icons?i=bootstrap" },
+    { name: "SQL", icon: "https://skillicons.dev/icons?i=mysql" },
+    { name: "jQuery", icon: "https://skillicons.dev/icons?i=jquery" },
     // Add more skills if needed
   ];
 
