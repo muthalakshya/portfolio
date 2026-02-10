@@ -5,7 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap");
 
 .backhome {
-  height: 625px;
+  min-height: 625px;
   color: #000000;
 }
 
