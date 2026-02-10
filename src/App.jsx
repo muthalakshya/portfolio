@@ -47,9 +47,9 @@ const App = () => {
       </div>
       <div className="relative z-10">
         <About />
-        <Skills />
         <Education />
         <Experiences />
+        <Skills />
         <Projects />
         <Achievements />
         <Footer />
