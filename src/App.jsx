@@ -1,14 +1,11 @@
 import { useState, useEffect } from "react";
-import Home from "./components/Home";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Education from "./components/Education";
-import Experiences from "./components/Experiences";
-import Projects from "./components/Projects";
-import Achievements from "./components/Achievements";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
+import LandingPage from "./pages/LandingPage";
+import MoreProjects from "./pages/MoreProjects";
 import { FaArrowUp } from "react-icons/fa";
+import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
   const [showButton, setShowButton] = useState(false);
@@ -35,37 +32,33 @@ const App = () => {
   };
 
   return (
-    <div className="text-black playwritefont scroll-smooth relative min-h-screen">
-      {/* Background Grid */}
-      <div className="moving-grid"></div>
+    <BrowserRouter>
+      <div className="text-black playwritefont scroll-smooth relative min-h-screen">
+        {/* Background Grid */}
+        <div className="moving-grid"></div>
+        <Analytics />
 
-      <NavBar />
+        <NavBar />
 
-      {/* Content */}
-      <div className="relative z-10 bg-transparent">
-        <Home />
-      </div>
-      <div className="relative z-10">
-        <About />
-        <Education />
-        <Experiences />
-        <Skills />
-        <Projects />
-        <Achievements />
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/more-projects" element={<MoreProjects />} />
+        </Routes>
+
         <Footer />
-      </div>
 
-      {/* Back to Top Button */}
-      {showButton && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-5 right-5 z-50 rounded-full bg-brand-yellow p-4 text-black shadow-lg hover:text-white hover:bg-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 transition-all duration-300"
-          aria-label="Back to Top"
-        >
-          <FaArrowUp />
-        </button>
-      )}
-    </div>
+        {/* Back to Top Button */}
+        {showButton && (
+          <button
+            onClick={scrollToTop}
+            className="fixed bottom-5 right-5 z-50 rounded-full bg-brand-yellow p-4 text-black shadow-lg hover:text-white hover:bg-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 transition-all duration-300"
+            aria-label="Back to Top"
+          >
+            <FaArrowUp />
+          </button>
+        )}
+      </div>
+    </BrowserRouter>
   );
 };
 

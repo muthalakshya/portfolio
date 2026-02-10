@@ -4,117 +4,91 @@ import { FaGithub, FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 const projectsData = [
   {
-    title: "Fusion Furnish",
-    subtitle: "AI-Powered Home Decor Platform",
+    title: "Toynik – E-commerce Platform",
+    subtitle: "FLAGSHIP",
+    tags: ["Full-Stack", "Production", "Startup"],
     technologies: [
       "React",
-      "Tailwind",
-      "JWT",
       "Node.js",
       "Express",
       "MongoDB",
-      "Mongoose",
+      "Tailwind",
+      "PhonePe",
+      "Delhivery",
     ],
     description:
-      "The home decor industry lacks a platform connecting manufacturers, consultants, and homeowners for efficient collaboration.",
+      "A full-scale e-commerce platform built for a consumer brand, handling payments, logistics, and admin operations.",
     bulletPoints: [
-      "Automated backend operations",
-      "Curated designs for homeowners",
-      "30-minute e-commerce store setup for consultants",
+      "MERN stack app with JWT authentication & role-based admin access",
+      "Integrated PhonePe payments and Delhivery API for order fulfillment",
+      "Custom admin panel for products, orders, users & delivery tracking",
+    ],
+    github: "", // Private/Startup
+    live: "https://toynik.com",
+    images: [
+      "https://res.cloudinary.com/dbkecod0k/image/upload/v1770751071/c88aa393-ad41-4989-b365-7391eeb5529b.png",
+      // "https://res.cloudinary.com/dbkecod0k/image/upload/v1770751118/150503b9-7794-4c27-bd0c-51618f97a342.png",
+      "https://res.cloudinary.com/dbkecod0k/image/upload/v1770751154/ddd7fe00-1e7c-491f-b283-3785bc811e84.png",
+      // "https://res.cloudinary.com/dbkecod0k/image/upload/v1770751186/d110a9cf-0036-4de1-87f9-f03f8d783cf2.png"
+    ], // Placeholder or user needs to provide
+  },
+  {
+    title: "Forever e-com",
+    subtitle: "",
+    tags: ["Full-Stack", "MERN"],
+    technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind", "JWT"],
+    description:
+      "A complete MERN-based e-commerce application with secure authentication and order management.",
+    bulletPoints: [
+      "Dynamic product catalog, cart & order tracking",
+      "JWT authentication with admin dashboard",
+      "Responsive UI using React & Tailwind",
+    ],
+    github: "https://github.com/muthalakshya/forever",
+    live: "https://forever-frontend-kfcd.onrender.com/",
+    images: [
+      "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747242/proj1a_ctgsex.jpg",
+      // "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747242/proj1b_zi06dd.jpg",
+      "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747243/proj1c_ehs7fo.jpg",
+    ],
+  },
+  {
+    title: "Fusion Furnish",
+    subtitle: "",
+    tags: ["AI", "Product Platform"],
+    technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind"],
+    description:
+      "An AI-powered home décor platform connecting homeowners, consultants, and manufacturers.",
+    bulletPoints: [
+      "Automated backend workflows",
+      "Consultant-focused mini-store generation",
+      "MERN stack with scalable architecture",
     ],
     github: "https://github.com/muthalakshya/FutureFurnish",
     live: "https://fusion-furnish.vercel.app/",
     images: [
       "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747094/proj0a_lxp36c.jpg",
       "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747133/proj0b_kcxtce.jpg",
-      "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747242/proj0d_f1dsgv.jpg",
-      "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747243/proj0c_od87cj.jpg",
     ],
   },
   {
-    title: "Forever e-com",
-    subtitle: "",
-    technologies: [
-      "React",
-      "Tailwind",
-      "JWT",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "Mongoose",
-    ],
-    description: "",
+    title: "Mitochondria",
+    subtitle: "Microlearning Platform",
+    tags: ["EdTech", "AI", "Automation"],
+    technologies: ["React", "Node.js", "n8n", "AI", "MongoDB", "Clerk", "JWT", "Tailwind", "Express"],
+    description:
+      "A microlearning ecosystem designed to improve critical thinking through AI-generated assessments.",
     bulletPoints: [
-      "Developed a responsive eCommerce platform with authentication, dynamic product catalogue and secure payments option",
-      "Features: cart management, order tracking and admin dashboard",
+      "Student, Teacher & Public platforms",
+      "AI-generated CBSE-mapped assessments",
+      "Automated content creation using n8n",
     ],
-    github: "https://github.com/muthalakshya/forever",
-    live: "https://forever-frontend-kfcd.onrender.com/",
+    github: "",
+    live: "https://www.mitochondria.in/",
     images: [
-      "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747242/proj1a_ctgsex.jpg",
-      "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747242/proj1b_zi06dd.jpg",
-      "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747243/proj1c_ehs7fo.jpg",
-      "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747243/proj1d_lwuljc.jpg",
-    ],
-  },
-  {
-    title: "Banking Website",
-    subtitle: "",
-    technologies: ["React", "Tailwind"],
-    description: "",
-    bulletPoints: ["Single page layout of banking website"],
-    github: "https://github.com/muthalakshya/bank_modern_app",
-    live: "https://lakshya-mutha.netlify.app/",
-    images: [
-      "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747244/proj2a_j9lpk0.jpg",
-      "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747244/proj2b_xnso1n.jpg",
-    ],
-  },
-  {
-    title: "Myntra Website",
-    subtitle: "",
-    technologies: ["React", "Tailwind"],
-    description: "",
-    bulletPoints: ["Home page of Myntra website"],
-    github: "https://github.com/muthalakshya/myntra",
-    live: "https://timely-torrone-201ad9.netlify.app/",
-    images: [
-      "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747260/proj5a_ctwneg.jpg",
-      "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747261/proj5b_jkasnj.jpg",
-    ],
-  },
-  {
-    title: "Netfix clone",
-    subtitle: "",
-    technologies: ["React", "Tailwind"],
-    description: "",
-    bulletPoints: ["Single page layout of the Netfix website"],
-    github: "https://github.com/muthalakshya/netflix",
-    live: "https://luxury-travesseiro-068786.netlify.app/",
-    images: [
-      "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747245/proj3a_gwlwkf.jpg",
-      "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747245/proj3b_hig91c.jpg",
-    ],
-  },
-  {
-    title: "PI Logistic",
-    subtitle: "",
-    technologies: [
-      "HTML",
-      "Bootstrap",
-      "CSS",
-      "JavaScript",
-      "Owl Carousel",
-      "JQuery",
-    ],
-    description: "",
-    bulletPoints: ["Single page layout of the PI Logistic website"],
-    github: "https://github.com/muthalakshya/pilogistics",
-    live: "https://adorable-treacle-e876a2.netlify.app/",
-    images: [
-      "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747246/proj4a_st2yqo.jpg",
-      "https://res.cloudinary.com/dbkecod0k/image/upload/v1770747264/proj4b_xznnhs.jpg",
-    ],
+      "https://res.cloudinary.com/dbkecod0k/image/upload/v1770751297/Picture1_zhwprb.png",
+      "https://res.cloudinary.com/dbkecod0k/image/upload/v1770751365/7baf37c0-b3a0-46d8-8451-bd35a9bb4b91.png"
+    ], // Placeholder
   },
 ];
 
@@ -185,36 +159,54 @@ const Projects = () => {
           >
             {/* Project Title */}
             <div className="lg:w-1/4">
-              <h1 className="text-3xl sm:text-5xl bg-gradient-to-r from-yellow-600 via-black to-yellow-600 bg-clip-text text-transparent">
+              <h1 className="text-3xl sm:text-4xl bg-gradient-to-r from-yellow-600 via-black to-yellow-600 bg-clip-text text-transparent font-bold">
                 {project.title}
               </h1>
               {project.subtitle && (
-                <h2 className="text-lg sm:text-xl pt-4 text-black">
+                <h2 className="text-lg sm:text-xl pt-2 font-bold text-brand-yellow">
                   {project.subtitle}
                 </h2>
+              )}
+
+              {/* Tags */}
+              {project.tags && (
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {project.tags.map((tag, idx) => (
+                    <span
+                      key={idx}
+                      className="text-xs font-bold text-white bg-black px-2 py-1 rounded"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               )}
             </div>
 
             {/* Project Details */}
             <div className="lg:w-3/4">
-              {/* Technologies Used */}
-              <div className="flex flex-col-reverse sm:flex-row justify-between sm:items-center gap-4 sm:gap-0">
-                <h2 className="text-xl sm:text-3xl text-black font-bold mt-2">
-                  Technologies Used
+              {/* Live/Github Buttons Row */}
+              <div className="flex flex-col-reverse sm:flex-row justify-between sm:items-center gap-4 sm:gap-0 mb-4">
+                <h2 className="text-xl sm:text-2xl text-black font-bold">
+                  Technologies
                 </h2>
-                <div className="flex self-start sm:self-auto">
-                  <button
-                    onClick={() => window.open(project.github, "_blank")}
-                    className="text-md text-white mr-2 bg-black px-4 py-2 sm:px-5 sm:pt-2 rounded transition-transform hover:scale-105"
-                  >
-                    <FaGithub size={20} />
-                  </button>
-                  <button
-                    onClick={() => window.open(project.live, "_blank")}
-                    className="text-md text-black bg-brand-yellow px-5 py-1 rounded transition-transform hover:scale-105"
-                  >
-                    Live
-                  </button>
+                <div className="flex self-start sm:self-auto gap-2">
+                  {project.github && (
+                    <button
+                      onClick={() => window.open(project.github, "_blank")}
+                      className="text-sm font-bold text-white bg-black px-4 py-2 rounded transition-transform hover:scale-105 flex items-center gap-2"
+                    >
+                      <FaGithub size={18} /> GitHub
+                    </button>
+                  )}
+                  {project.live && (
+                    <button
+                      onClick={() => window.open(project.live, "_blank")}
+                      className="text-sm font-bold text-black bg-brand-yellow px-4 py-2 rounded transition-transform hover:scale-105"
+                    >
+                      Live Demo
+                    </button>
+                  )}
                 </div>
               </div>
 
@@ -265,6 +257,15 @@ const Projects = () => {
             </div>
           </div>
         ))}
+
+        <div className="flex justify-center mt-12">
+          <a
+            href="/more-projects"
+            className="inline-flex items-center gap-2 text-lg font-bold text-white bg-black px-8 py-3 rounded-full shadow-lg hover:bg-brand-yellow hover:text-black hover:-translate-y-1 transition-all duration-300"
+          >
+            View More Projects <span className="text-xl">→</span>
+          </a>
+        </div>
       </div>
     </div>
   );
