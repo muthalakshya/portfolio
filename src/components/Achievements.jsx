@@ -3,6 +3,10 @@ import { FaAward, FaCertificate } from "react-icons/fa";
 const Achievements = () => {
   const certifications = [
     {
+      title: "AWS Certified Cloud Practitioner",
+      issuer: "Amazon Web Services",
+    },
+    {
       title: "Meta Front-End Developer Specialization",
       issuer: "Coursera",
     },
@@ -30,8 +34,8 @@ const Achievements = () => {
       institution: "Reliance Foundation",
     },
     {
-      title: "Founder/Coordinator",
-      institution: "JIET Entrepreneurship and Start-Up Cell (JESC)",
+      title: "Founder, Best Student Club Award",
+      institution: "JIET Entrepreneurship and Start-up Cell (200+ students empowered)",
     },
   ];
 

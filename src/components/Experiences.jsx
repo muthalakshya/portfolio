@@ -5,11 +5,25 @@ import { FaRegBuilding } from "react-icons/fa";
 const Experiences = () => {
   const experiences = [
     {
+      role: "AI Engineer - 1",
+      company: "Prospire Technology Services",
+      companyLink: "https://prospiretech.com",
+      date: "April 2026 - Present",
+      type: "On-site",
+      location: "Jodhpur, Rajasthan",
+      points: [
+        "Building enterprise web applications with React, TanStack Query, and REST-based services.",
+        "Developing dashboards and frontend data flows backed by APIs and databases.",
+        "Collaborating on enterprise platforms covering monitoring, reporting, and operational workflows.",
+      ],
+    },
+    {
       role: "Full Stack Developer Intern",
       company: "Ideaforage Innovations",
       companyLink: "https://ideaforage.com",
-      date: "May 2025 - Present",
-      type: "Remote",
+      date: "June 2025 - March 2026",
+      type: "On-site",
+      location: "Jodhpur, Rajasthan",
       points: [
         "Built the company introduction website (ideaforage.com) using React.js & Tailwind CSS.",
         "Developed a MERN-based e-commerce platform for Toynik (toynik.com) as a solo developer.",
@@ -22,7 +36,7 @@ const Experiences = () => {
       role: "Full Stack Developer Intern",
       company: "EntrePi",
       companyLink: "https://entrepi.world",
-      date: "May 2025 – Jan 2026",
+      date: "June 2025 – Jan 2026",
       type: "Remote",
       points: [
         "Developed multiple microlearning and assessment platforms under the Mitochondria startup focused on improving critical thinking.",
@@ -37,7 +51,7 @@ const Experiences = () => {
       role: "Web Developer",
       company: "Virtual Labs, IIT Roorkee",
       companyLink: "http://vlab.iitr.ac.in/index.html",
-      date: "May 2024 - July 2024",
+      date: "May 2024 - June 2024",
       type: "Remote",
       location: "Roorkee",
       points: [

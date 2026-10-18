@@ -1,7 +1,49 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FaGithub, FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 const moreProjectsData = [
+  {
+    category: "Client Websites",
+    projects: [
+      {
+        title: "Shaina Builders",
+        description:
+          "Premium corporate website for a real-estate and hospitality developer, with project showcases and a cinematic hero.",
+        github: "",
+        live: "https://www.shainabuilders.com/",
+        images: ["/projects/shainabuilders.jpg"],
+        top: true,
+      },
+      {
+        title: "HST Hospitality",
+        description:
+          "Hotel group website with a booking search bar, property listings, F&B outlets and experiences.",
+        github: "",
+        live: "https://www.hsthospitality.com/",
+        images: ["/projects/hsthospitality.jpg"],
+        top: true,
+      },
+      {
+        title: "AdviraGlobal",
+        description:
+          "Fractional CFO services website for GCC and international markets, built for lead generation.",
+        github: "",
+        live: "https://www.adviraglobal.com/",
+        images: ["/projects/adviraglobal.jpg"],
+        top: true,
+      },
+      {
+        title: "Labour Law Consultant",
+        description:
+          "Payroll, PF and ESI compliance website with service pages, calculators and consultation flow.",
+        github: "",
+        live: "https://www.labourlawconsultant.com/",
+        images: ["/projects/labourlawconsultant.jpg"],
+        top: true,
+      },
+    ],
+  },
   {
     category: "Startup & Product Experiments",
     projects: [
@@ -118,7 +160,7 @@ const MoreProjects = () => {
                         <img
                           src={proj.images[0]}
                           alt={proj.title}
-                          className="w-full h-32 object-cover"
+                          className={`w-full object-cover ${proj.top ? "h-40 object-top" : "h-32"}`}
                         />
                       </div>
                     )}
@@ -148,12 +190,12 @@ const MoreProjects = () => {
         ))}
 
         <div className="text-center mt-12">
-          <a
-            href="/"
+          <Link
+            to="/"
             className="inline-block text-lg font-bold text-white bg-black px-8 py-3 rounded-full shadow-lg hover:bg-brand-yellow hover:text-black transition-all"
           >
             ← Back to Home
-          </a>
+          </Link>
         </div>
       </div>
     </div>

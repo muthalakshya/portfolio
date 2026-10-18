@@ -4,9 +4,9 @@ const Education = () => {
   const educationData = [
     {
       year: "2026",
-      degree: "Bachelor of Technology (Data Science)",
-      institute: "Jodhpur Institute of Engineering & Technology, Jodhpur",
-      performance: "9.82 CGPA",
+      degree: "B.Tech Computer Science (Data Science)",
+      institute: "JIET Group of Institutions, Jodhpur",
+      performance: "9.81 CGPA",
     },
     {
       year: "2022",

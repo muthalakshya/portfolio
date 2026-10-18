@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaGithub, FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 const projectsData = [
@@ -259,12 +260,12 @@ const Projects = () => {
         ))}
 
         <div className="flex justify-center mt-12">
-          <a
-            href="/more-projects"
+          <Link
+            to="/more-projects"
             className="inline-flex items-center gap-2 text-lg font-bold text-white bg-black px-8 py-3 rounded-full shadow-lg hover:bg-brand-yellow hover:text-black hover:-translate-y-1 transition-all duration-300"
           >
             View More Projects <span className="text-xl">→</span>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
